@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&family=Cairo:wght@300;400;600&family=Open+Sans:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    /* Set The Border Sizing to border box */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: box-border;
+    /* Reset the margin & padding */
+    padding:0;
+    margin:0;
+    /* Disabling the curet in the not input field */
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+/* Variables */
+:root {
+    --main-color: #081b29;
+    --main-color-alt: #00adf0;
+    --text-color: #ededed;
+}
+/* For All the Html */
+html {
+    scroll-behavior: smooth;
+}
+/* For All the Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--main-color);
+}
+/* Reset the ul */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 ;
+}
+/* The Header = logo + navbar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 10%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Let the li beside each other horizontal */
+.header nav ul {
+    display: flex;
+}
+/* The Logo in the header */
+.header .logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+/* The Links in the header */
+.navbar ul li a {
+    font-size: 18px;
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 35px;
+    transition: 0.3s;
+}
+/* When Hovering in the link or the active page */
+.navbar ul li a:hover,
+.navbar ul li .active {
+    color: var(--main-color-alt);
+}
