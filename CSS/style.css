@@ -7,11 +7,6 @@
     /* Reset the margin & padding */
     padding:0;
     margin:0;
-    /* Disabling the curet in the not input field */
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-    user-select: none;
 }
 /* Variables */
 :root {
@@ -27,6 +22,8 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--main-color);
+    /* All the text in the site will be this color instead that one you edit */
+    color: var(--text-color);
 }
 /* Reset the ul */
 ul {
@@ -34,14 +31,20 @@ ul {
     margin: 0;
     padding: 0 ;
 }
+.disable_curet {
+    /* Disabling the curet in the not input field */
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
 /* The Header = logo + navbar */
 .header {
     position: fixed;
-    top: 0;
+    top: 15px;
     left: 0;
     width: 100%;
     padding: 10px 10%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,11 +54,8 @@ ul {
     display: flex;
 }
 /* The Logo in the header */
-.header .logo {
-    font-size: 25px;
-    color: #ededed;
-    text-decoration: none;
-    font-weight: 600;
+.header .logo img {
+    width: 50px;
 }
 /* The Links in the header */
 .navbar ul li a {
@@ -69,4 +69,119 @@ ul {
 .navbar ul li a:hover,
 .navbar ul li .active {
     color: var(--main-color-alt);
+}
+/* The Media for the Medium and the Small Screens */
+@media (max-width: 825px) {
+    .header ul li:nth-child(4) {
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    .header ul li:nth-child(3) {
+        display: none;
+    }
+}
+/* To let the main content move down */
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 10px 10%;
+}
+/* Let the home content section take almost the half */
+.home .home-content {
+    max-width: 60%;
+}
+/* Styling the h1, h3, and the p */
+.home .home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+}
+.home .home-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--main-color-alt);
+}
+.home .home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+/* Styling the Botton Box */
+.home .home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    margin-top: 10px;
+}
+/* Style the a inside the botton box */
+.home .home-content .btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background-color: var(--main-color-alt);
+    border: 2px solid var(--main-color-alt);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--main-color);
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+}
+/* Styling the second box */
+.home .home-content .btn-box a:nth-child(2) {
+    background-color: var(--main-color);
+    color: var(--main-color-alt);
+}
+.home .home-content .btn-box a:nth-child(2):hover {
+    color: var(--main-color);
+    background-color: var(--main-color-alt);
+}
+/* Styling the first box + :before */
+.home .home-content .btn-box a:hover {
+    color: var(--main-color-alt);
+    background-color: var(--main-color);
+}
+/* Styling Social Media */
+.home .home-sci {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 25px;
+    width: 170px;
+}
+/* Every icon inside the Social Media Box */
+.home .home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--main-color-alt);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color-alt);
+    text-decoration: none;
+    background-color: transparent;
+    transition: 0.3s;
+}
+.home .home-sci a:hover {
+    background-color: var(--main-color-alt);
+    color: var(--main-color);
+}
+/* The Media For the Small Screens */
+@media (max-width: 767px) {
+    .home .home-content{
+        max-width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .home{
+        padding: 10px 5%;
+    }
 }
