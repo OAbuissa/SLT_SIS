@@ -227,3 +227,100 @@ ul {
     color: var(--main-color-alt);
     background-color: var(--main-color);
 }
+/* The Team Images */
+.about-img {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* The image it self */
+#image {
+    transition: opacity 1s ease-in-out;
+    border-radius: 50%;
+    width: 60%;
+    border: .2rem solid var(--main-color-alt);
+}
+/* The spinner around the image */
+.about-img .spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(0);
+    width: 68%;
+    height: 68%;
+    border-radius: 50%;
+    border-top: .2rem solid var(--main-color);
+    border-bottom: .2rem solid var(--main-color);
+    border-left: .2rem solid var(--main-color-alt);
+    border-right: .2rem solid var(--main-color-alt);
+    animation: aboutSpinner 8s linear infinite;
+}
+/* The Whole Team image Container*/
+.team-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 130px;
+}
+/* Styling the image it self */
+.team-img img {
+    position: relative;
+    width: 450px;
+    border-radius: 12px;
+    border: 3px solid var(--main-color-alt);
+}
+/* The Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+/* Styling Social Media Box*/
+.footer .home-sci {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    margin-bottom: 70px;
+    width: 170px;
+}
+/* Every icon inside the Social Media Box */
+.footer .home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--main-color-alt);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color-alt);
+    text-decoration: none;
+    background-color: transparent;
+    transition: 0.3s;
+}
+/* The Icon When Hovering */
+.footer .home-sci a:hover {
+    background-color: var(--main-color-alt);
+    color: var(--main-color);
+}
+/* The Paragraph in the Footer */
+.footer .copyright {
+    margin-top: 60px;
+}
+/* The Span inside the paragraph [SLT | SIS] */
+.footer .copyright span {
+    font-weight: 500;
+    color: var(--main-color-alt);
+}
+/* End Home Page */
